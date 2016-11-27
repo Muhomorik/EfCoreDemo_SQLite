@@ -13,7 +13,17 @@ namespace EfCoreDemo_SQLite
             {
                 db.Database.EnsureCreated();
 
-                db.Blogs.Add(new Blog { Url = "http://blogs.msdn.com/adonet" });
+                var blog_1 = new Blog {Url = "http://blogs.msdn.com/adonet"};
+                db.Blogs.Add(blog_1);
+
+                //db.Posts.Add(new Post
+                //{
+                //    Blog = blog_1,
+                //    BlogId = 1,
+                //    Content = "Hello World",
+                //    PostId = 1,
+                //    Title = "Super title!"
+                //});
                 var count = db.SaveChanges();
 
                 Console.WriteLine("{0} records saved to database", count);
