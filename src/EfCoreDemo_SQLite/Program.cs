@@ -11,6 +11,8 @@ namespace EfCoreDemo_SQLite
 
             using (var db = new BloggingContext())
             {
+                db.Database.EnsureCreated();
+
                 db.Blogs.Add(new Blog { Url = "http://blogs.msdn.com/adonet" });
                 var count = db.SaveChanges();
 
