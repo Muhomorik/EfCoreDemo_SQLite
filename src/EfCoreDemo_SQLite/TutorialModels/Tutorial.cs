@@ -1,19 +1,16 @@
 ﻿using System;
-using EfCoreDemo_SQLite.TutorialModels;
 
-namespace EfCoreDemo_SQLite
+namespace EfCoreDemo_SQLite.TutorialModels
 {
-    public class Program
+    public class Tutorial
     {
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Hello world!");
 
+        public void RunNewDbTutorial()
+        {
             using (var db = new BloggingContext())
             {
                 db.Blogs.Add(new Blog { Url = "http://blogs.msdn.com/adonet" });
                 var count = db.SaveChanges();
-
                 Console.WriteLine("{0} records saved to database", count);
 
                 Console.WriteLine();
