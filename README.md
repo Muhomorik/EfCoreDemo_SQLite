@@ -8,6 +8,11 @@ Problems:
 
 https://github.com/dotnet/cli/issues/2802
 
+### Run console app ###
+
+- If it's a portable application (the default), you run it by *dotnet yourapp.dll*.
+- If it's a self-contained application, you run it using *yourapp.exe* on Windows and *./yourapp* on Unix.
+
 ## Article SQlite code: ##
 
     dotnet ef migrations add MyFirstMigration
